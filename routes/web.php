@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home',function() {
+	$name = "pin";
+	$pp = "Coe";
+	//return view('index' compact('name'));
+	return view('index')->with('name',$name)->with('pp',$pp);
+});
+
+Route::get('/test',function() {
+	$name = "jiratchaya";
+	return view('test')->with('name',$name);
+});
