@@ -11,18 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/','HomeController@index');
+Route::get('/home','HomeController@home');
+Route::get('/test','HomeController@test');
 
-Route::get('/home',function() {
-	$name = "pin";
-	$pp = "Coe";
-	//return view('index' compact('name'));
-	return view('index')->with('name',$name)->with('pp',$pp);
-});
-
-Route::get('/test',function() {
-	$name = "jiratchaya";
-	return view('test')->with('name',$name);
-});
+Route::post('/home','HomeController@report');
