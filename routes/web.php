@@ -17,5 +17,12 @@
 Route::get('/','HomeController@index');
 Route::get('/home','HomeController@home');
 Route::get('/test','HomeController@test');
+Route::get('/humans','HomeController@humans');
+Route::get('/create','HomeController@create');
 
 Route::post('/home','HomeController@report');
+Route::post('/create','HomeController@createAction');
+
+Route::get('/update/{id}','HomeController@update');
+Route::post('/update','HomeController@updateAction');
+Route::get('/delete/{id}','HomeController@delete');

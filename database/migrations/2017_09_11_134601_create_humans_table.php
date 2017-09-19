@@ -15,7 +15,7 @@ class CreateHumansTable extends Migration
     {
         Schema::create('humans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->uniqid();
+            $table->string('name')->unique();
             $table->integer('age');
             $table->timestamps();
         });
